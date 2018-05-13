@@ -1,9 +1,9 @@
 // Enemies our player must avoid
 class Enemy {
   constructor(x, y) {
+    this.sprite = 'images/enemy-bug.png'; // Enemy image
     this.x = x;
     this.y = y;
-    this.sprite = 'images/enemy-bug.png'; // Enemy image
   }
 
   /* Update the enemy's position, required method for game
@@ -23,10 +23,10 @@ class Enemy {
    This class requires an update(), render() and
    a handleInput() method. */
 class Player {
-  constructor(x, y) {
-    this.x = x;
-    this.y = y;
+  constructor() {
     this.sprite = 'char-boy.png'; // Player image
+    this.x = 200;
+    this.y = 320;
   }
 
 
@@ -58,7 +58,7 @@ const enemy6 = new Enemy(-890, 230);
 
 const allEnemies = [enemy1, enemy2, enemy3, enemy4, enemy5, enemy6];
 
-const player = new Player(200, 320);
+const player = new Player();
 
 /* This listens for key presses and sends the keys to your
    Player.handleInput() method. You don't need to modify this. */
