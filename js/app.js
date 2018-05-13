@@ -25,8 +25,8 @@ class Enemy {
 class Player {
   constructor() {
     this.sprite = 'char-boy.png'; // Player image
-    this.x = 200;
-    this.y = 320;
+    this.x = 150;
+    this.y = 300;
   }
 
 
@@ -49,12 +49,12 @@ class Player {
 /* Now instantiate your objects.
    Place all enemy objects in an array called allEnemies
    Place the player object in a variable called player */
-const enemy1 = new Enemy(-90, 60);
-const enemy2 = new Enemy(-190, 140);
-const enemy3 = new Enemy(-290, 230);
-const enemy4 = new Enemy(-390, 140);
-const enemy5 = new Enemy(-490, 60);
-const enemy6 = new Enemy(-890, 230);
+const enemy1 = new Enemy(-50, 80);
+const enemy2 = new Enemy(-150, 100);
+const enemy3 = new Enemy(-250, 120);
+const enemy4 = new Enemy(-350, 140);
+const enemy5 = new Enemy(-450, 160);
+const enemy6 = new Enemy(-550, 180);
 
 const allEnemies = [enemy1, enemy2, enemy3, enemy4, enemy5, enemy6];
 
