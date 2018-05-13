@@ -9,9 +9,7 @@ class Enemy {
   /* Update the enemy's position, required method for game
      Parameter: dt, a time delta between ticks */
   update(dt) {
-    /* You should multiply any movement by the dt parameter
-       which will ensure the game runs at the same speed for
-       all computers */
+
   }
 
   // Draw the enemy on the screen, required method for game
@@ -38,7 +36,7 @@ class Player {
 
 
   render() {
-
+    ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
   }
 
 
