@@ -50,12 +50,12 @@ class Player {
    Place all enemy objects in an array called allEnemies
    Place the player object in a variable called player */
 const allEnemies = [
-  const enemy1 = new Enemy(-50, 80);
-  const enemy2 = new Enemy(-150, 100);
-  const enemy3 = new Enemy(-250, 120);
-  const enemy4 = new Enemy(-350, 140);
-  const enemy5 = new Enemy(-450, 160);
-  const enemy6 = new Enemy(-550, 180);
+  new Enemy(-50, 80),
+  new Enemy(-150, 100),
+  new Enemy(-250, 120),
+  new Enemy(-350, 140),
+  new Enemy(-450, 160),
+  new Enemy(-550, 180)
 ];
 
 const player = new Player();
