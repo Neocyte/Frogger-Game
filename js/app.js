@@ -9,7 +9,15 @@ class Enemy {
   /* Update the enemy's position,
      Parameter: dt = a time delta between ticks */
   update(dt) {
+    if (this.x < 500) {
+      this.x += (100 * dt);
+    } else {
+      this.x = // INSERT LOWEST X VALUE OF ENEMY
+    }
 
+    if (/* INSERT COLLISION CONDITIONS */) {
+      player.reset();
+    }
   }
 
   // Draw the enemy on the screen
@@ -39,7 +47,7 @@ class Player {
     this.y = 420;
   }
 
-  // Draw the enemy on the screen
+  // Draws the enemy on the screen
   render() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
   }
