@@ -24,7 +24,7 @@ class Player {
   constructor() {
     this.sprite = 'images/char-boy.png'; // Player image
     this.x = 200;
-    this.y = 320;
+    this.y = 420;
   }
 
   /* Update the enemy's position,
@@ -47,12 +47,12 @@ class Player {
 
 // Instantiated enemies and player
 const allEnemies = [
-  new Enemy(-50, 80),
-  new Enemy(-150, 100),
-  new Enemy(-250, 120),
-  new Enemy(-350, 140),
-  new Enemy(-450, 160),
-  new Enemy(-550, 180)
+  new Enemy(0, 50),
+  new Enemy(200, 50),
+  new Enemy(300, 135),
+  new Enemy(200, 215),
+  new Enemy(100, 300),
+  new Enemy(400, 300)
 ];
 
 const player = new Player();
