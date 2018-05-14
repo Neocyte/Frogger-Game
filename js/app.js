@@ -25,8 +25,8 @@ class Enemy {
 class Player {
   constructor() {
     this.sprite = 'images/char-boy.png'; // Player image
-    this.x = 150;
-    this.y = 300;
+    this.x = 200;
+    this.y = 320;
   }
 
 
