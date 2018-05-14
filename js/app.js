@@ -12,10 +12,10 @@ class Enemy {
     if (this.x < 500) {
       this.x += (100 * dt);
     } else {
-      this.x = // INSERT LOWEST X VALUE OF ENEMY
+      this.x = 0;
     }
 
-    if (/* INSERT COLLISION CONDITIONS */) {
+    if (   &&    &&    &&   ) {
       player.reset();
     }
   }
@@ -38,7 +38,9 @@ class Player {
   /* Update the enemy's position,
      Parameter: dt = a time delta between ticks */
   update(dt) {
-
+    if (player.y < 20) {
+      player.reset();
+    }
   }
 
   // Resets player to original position if water is reached or hit by enemy
