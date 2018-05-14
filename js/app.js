@@ -24,7 +24,7 @@ class Enemy {
    a handleInput() method. */
 class Player {
   constructor() {
-    this.sprite = 'char-boy.png'; // Player image
+    this.sprite = 'images/char-boy.png'; // Player image
     this.x = 150;
     this.y = 300;
   }
