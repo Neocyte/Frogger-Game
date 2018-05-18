@@ -1,9 +1,9 @@
 // Enemies our player must avoid
 class Enemy {
-  constructor(x, y) {
+  constructor() {
     this.sprite = 'images/enemy-bug.png'; // Enemy image
-    this.x = x;
-    this.y = y;
+    this.x = Math.random() * 450;
+    this.y = Math.random() * 350;
   }
 
   /* Update the enemy's position,
@@ -11,8 +11,9 @@ class Enemy {
   update(dt) {
     if (this.x < 500) {
       this.x += (100 * dt);
-    } else {
-      this.x = 0;
+    }
+    else if (this.x > 500) {
+      this.reset();
     }
 
     if (this.x < player.x + 30 && this.x + 60 > player.x && this.y < player.y + 60 && this.y + 40 > player.y) {
@@ -20,7 +21,13 @@ class Enemy {
     }
   }
 
-  // Draw the enemy on the screen
+  // Resets enemies to the left with a random y-value
+  reset() {
+    this.x = 0;
+    this.y = Math.random() * 350;
+  }
+
+  // Draws the enemy on the screen
   render() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
   }
@@ -43,7 +50,7 @@ class Player {
     }
   }
 
-  // Resets player to original position if water is reached or hit by enemy
+  // Resets player to original position if water is reached or if hit by enemy
   reset() {
     this.x = 200;
     this.y = 420;
@@ -73,12 +80,12 @@ class Player {
 
 // Instantiated enemies and player
 const allEnemies = [
-  new Enemy(0, 50),
-  new Enemy(200, 50),
-  new Enemy(300, 135),
-  new Enemy(200, 215),
-  new Enemy(100, 300),
-  new Enemy(400, 300)
+  new Enemy(this.x, this.y),
+  new Enemy(this.x, this.y),
+  new Enemy(this.x, this.y),
+  new Enemy(this.x, this.y),
+  new Enemy(this.x, this.y),
+  new Enemy(this.x, this.y)
 ];
 
 const player = new Player();
