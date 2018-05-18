@@ -15,7 +15,7 @@ class Enemy {
       this.x = 0;
     }
 
-    if (   &&    &&    &&   ) {
+    if (this.x < player.x + 30 && this.x + 60 > player.x && this.y < player.y + 60 && this.y + 40 > player.y) {
       player.reset();
     }
   }
