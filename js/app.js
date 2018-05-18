@@ -55,10 +55,20 @@ class Player {
   }
 
   // Moves player based on key press
-  handleInput() {
-
+  handleInput(arrow) {
+    if (arrow == 'left' && this.x > 0) {
+        this.x -= 50;
+    }
+    if (arrow == 'right' && this.x < 400) {
+        this.x += 50;
+    }
+    if (arrow == 'up' && this.y > 3) {
+        this.y -= 50;
+    }
+    if(arrow == 'down' && this.y < 400) {
+        this.y += 50;
+    }
   }
-
 }
 
 // Instantiated enemies and player
