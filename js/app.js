@@ -69,7 +69,7 @@ class Player {
     if (arrow == 'right' && this.x < 400) {
         this.x += 50;
     }
-    if (arrow == 'up' && this.y > 3) {
+    if (arrow == 'up' && this.y > 5) {
         this.y -= 50;
     }
     if(arrow == 'down' && this.y < 400) {
