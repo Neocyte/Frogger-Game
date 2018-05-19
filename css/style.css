@@ -2,3 +2,23 @@ body {
     text-align: center;
     background-image: url('http://hddesktopwallpapers.in/wp-content/uploads/2015/09/grass-wallpaper-full-hd.jpg'); /* Source: http://hddesktopwallpapers.in/grass-wallpaper-full-hd/ */
 }
+
+.score {
+  padding-top: 3%;
+}
+
+.score-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 26.5%;
+    height: 50px;
+    background-image: url('https://media.gettyimages.com/xc/82584430-several-soap-bubbles-on-white-background.jpg?v=1&c=IWSAsset&k=2&d=6C4008C0FD9EB5A56BDEE719E67C0DCA24BEDFBCAF1B6A72581AC9292CCDCDA6&b=MjQz');
+    margin-left: 36.75%;
+    margin-right: 36.75%;
+    border-radius: 5px;
+    font-size: 30px;
+    font-weight: bold;
+}
