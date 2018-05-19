@@ -70,8 +70,8 @@ class Player {
     this.y = 420;
   }
 
-  /* Update the enemy's position,
-     Parameter: dt = a time delta between ticks */
+  /* Update the player's position
+     when the player reaches the water */
   update(dt) {
     if (player.y < 20) {
       player.reset();
