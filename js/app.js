@@ -108,6 +108,8 @@ class Player {
   }
 }
 
+// ---------------------------Instanciation-------------------------------------
+
 // Instantiated enemies and player
 const allEnemies = [
   new Enemy(this.x, this.y),
