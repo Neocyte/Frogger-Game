@@ -15,7 +15,9 @@ body {
     text-align: center;
     width: 26.5%;
     height: 50px;
-    background-image: url('https://media.gettyimages.com/xc/82584430-several-soap-bubbles-on-white-background.jpg?v=1&c=IWSAsset&k=2&d=6C4008C0FD9EB5A56BDEE719E67C0DCA24BEDFBCAF1B6A72581AC9292CCDCDA6&b=MjQz');
+    background: linear-gradient(160deg, #5A72D9, #5FC148);
+    color: #fff;
+    box-shadow: 5px 2px 5px 0 #000;
     margin-left: 36.75%;
     margin-right: 36.75%;
     border-radius: 5px;
