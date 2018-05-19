@@ -9,7 +9,7 @@ let updateScore = function() {
   score += 1;
 };
 
-/* This listens for key presses and sends the keys to your
+/* This listens for key presses and sends the keys to the
    Player.handleInput() method. Immediately invoked. */
 let keyListener = (function() {
   document.addEventListener('keyup', function(e) {
