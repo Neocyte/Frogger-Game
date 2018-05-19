@@ -16,7 +16,7 @@ class Enemy {
       this.reset();
     }
 
-    if (this.x < player.x + 30 && this.x + 60 > player.x && this.y < player.y + 60 && this.y + 40 > player.y) {
+    if (this.x < player.x + 20 && this.x + 50 > player.x && this.y < player.y + 50 && this.y + 30 > player.y) { // Source: http://blog.sklambert.com/html5-canvas-game-2d-collision-detection/
       player.reset();
     }
   }
