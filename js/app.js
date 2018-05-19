@@ -24,7 +24,7 @@ let keyListener = (function() {
   });
 })();
 
-// -----------------------------Classes-----------------------------------------
+// -----------------------------CLASSES-----------------------------------------
 
 // Enemies our player must avoid
 class Enemy {
@@ -108,7 +108,7 @@ class Player {
   }
 }
 
-// ---------------------------Instanciation-------------------------------------
+// ---------------------------INSTANCIATION-------------------------------------
 
 // Instantiated enemies and player
 const allEnemies = [
