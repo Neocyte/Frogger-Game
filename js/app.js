@@ -44,6 +44,7 @@ class Enemy {
       this.reset();
     }
 
+    // Enemy and player collision
     if (this.x < player.x + 20 && this.x + 50 > player.x && this.y < player.y + 50 && this.y + 30 > player.y) { // Source: http://blog.sklambert.com/html5-canvas-game-2d-collision-detection/
       player.reset();
     }
@@ -59,7 +60,6 @@ class Enemy {
   render() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
   }
-
 }
 
 // Player whose goal is to cross into water
