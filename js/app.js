@@ -1,3 +1,12 @@
+// Beginning score is 0
+let score = 0;
+
+// Updates score by 1
+let updateScore = function() {
+  document.querySelector('.score-number').innerHTML = score;
+  score += 1;
+};
+
 // Enemies our player must avoid
 class Enemy {
   constructor() {
@@ -47,6 +56,8 @@ class Player {
   update(dt) {
     if (player.y < 20) {
       player.reset();
+      updateScore();
+      document.querySelector('.score-number').innerHTML = score;
     }
   }
 
