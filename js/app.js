@@ -1,3 +1,5 @@
+// ---------------------------GLOBAL VARIABLES----------------------------------
+
 // Beginning score is 0
 let score = 0;
 
@@ -21,6 +23,8 @@ let keyListener = (function() {
     player.handleInput(allowedKeys[e.keyCode]);
   });
 })();
+
+// -----------------------------Classes-----------------------------------------
 
 // Enemies our player must avoid
 class Enemy {
