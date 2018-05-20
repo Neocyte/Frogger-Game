@@ -1,4 +1,4 @@
-@font-face {
+@font-face { /* Source: http://www.1001fonts.com/no-continue-font.html */
   font-family: arcadeFont;
   src: url(arcade_font.ttf);
 }
@@ -48,6 +48,8 @@ body {
     width: 27.5px;
     height: 46.55px;
     padding: 13px;
+    animation: beat .25s infinite alternate;
+	  transform-origin: center;
 }
 
 .lose {
@@ -98,4 +100,8 @@ body {
   border-radius: 8px;
   color: #fff;
   background-color: #ff0000;
+}
+
+@keyframes beat { /* Source: https://codepen.io/fivera/pen/rzepn */
+	to { transform: scale(1.4); }
 }
