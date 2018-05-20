@@ -41,6 +41,15 @@ let keyListener = (function() {
   });
 })();
 
+let gameOver = function() {
+  document.querySelector('.gameover-popup').style.display = 'flex';
+  document.querySelector('.gameover-background').style.display = 'flex';
+
+  document.querySelector('.gameover-button').addEventListener('click', function() {
+    location.reload();
+  });
+};
+
 // -----------------------------CLASSES-----------------------------------------
 
 // Enemies our player must avoid
@@ -65,6 +74,11 @@ class Enemy {
     if (this.x < player.x + 20 && this.x + 50 > player.x && this.y < player.y + 50 && this.y + 30 > player.y) { // Source: http://blog.sklambert.com/html5-canvas-game-2d-collision-detection/
       player.reset();
       loseHeart();
+    }
+
+    // GAME OVER
+    if (hearts === 0) {
+      gameOver();
     }
   }
 

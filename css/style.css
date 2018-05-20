@@ -1,4 +1,10 @@
+@font-face {
+  font-family: arcadeFont;
+  src: url(arcade_font.ttf);
+}
+
 body {
+    font-family: arcadeFont, "Comic Sans MS", cursive, sans-serif, Georgia, serif;
     text-align: center;
     background-image: url('http://hddesktopwallpapers.in/wp-content/uploads/2015/09/grass-wallpaper-full-hd.jpg'); /* Source: http://hddesktopwallpapers.in/grass-wallpaper-full-hd/ */
 }
@@ -51,4 +57,45 @@ body {
 .score-text {
   width: 100px;
   padding-left: 75px;
+}
+
+.gameover-background {
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: fixed;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+.gameover-popup {
+  width: 20%;
+  padding-bottom: 50px;
+  text-align: center;
+  display: none; /* Hidden by default; changes to flex during GAME OVER */
+  position: fixed;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+}
+
+.gameover-heading {
+  font-size: 75px;
+}
+
+.gameover-button {
+  font-size: 20px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  color: #fff;
+  background-color: #ff0000;
 }
