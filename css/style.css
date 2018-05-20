@@ -39,7 +39,9 @@ body {
 .heart1,
 .heart2,
 .heart3 {
-    width: 50%;
+    width: 27.5px;
+    height: 46.55px;
+    padding: 13px;
 }
 
 .lose {
