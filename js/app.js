@@ -55,7 +55,7 @@ class Enemy {
      Parameter: dt = a time delta between ticks */
   update(dt) {
     if (this.x < 500) {
-      this.x += (100 * dt);
+      this.x += (150 * dt);
     }
     else if (this.x > 500) {
       this.reset();
