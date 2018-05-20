@@ -48,7 +48,7 @@ body {
     width: 27.5px;
     height: 46.55px;
     padding: 13px;
-    animation: beat .25s infinite alternate;
+    animation: beat .375s infinite alternate;
 	  transform-origin: center;
 }
 
