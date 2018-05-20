@@ -85,7 +85,7 @@ class Player {
   constructor() {
     this.sprite = 'images/char-boy.png'; // Player image
     this.x = 200;
-    this.y = 420;
+    this.y = 400;
   }
 
   /* Update the player's position
@@ -112,16 +112,16 @@ class Player {
   // Moves player based on key press
   handleInput(arrow) {
     if (arrow == 'left' && this.x > 0) {
-        this.x -= 50;
+        this.x -= 100;
     }
     if (arrow == 'right' && this.x < 400) {
-        this.x += 50;
+        this.x += 100;
     }
     if (arrow == 'up' && this.y > 5) {
-        this.y -= 50;
+        this.y -= 95;
     }
     if(arrow == 'down' && this.y < 400) {
-        this.y += 50;
+        this.y += 95;
     }
   }
 }
