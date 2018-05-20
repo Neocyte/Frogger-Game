@@ -30,7 +30,7 @@ let updateScore = function() {
    Player.handleInput() method. Immediately invoked. */
 let keyListener = (function() {
   document.addEventListener('keyup', function(e) {
-    var allowedKeys = {
+    const allowedKeys = {
         37: 'left',
         38: 'up',
         39: 'right',
@@ -42,9 +42,10 @@ let keyListener = (function() {
 })();
 
 let gameOver = function() {
+  allEnemies = [];
+
   document.querySelector('.gameover-popup').style.display = 'flex';
   document.querySelector('.gameover-background').style.display = 'flex';
-
   document.querySelector('.gameover-button').addEventListener('click', function() {
     location.reload();
   });
@@ -143,7 +144,7 @@ class Player {
 // ---------------------------INSTANCIATION-------------------------------------
 
 // Instantiated enemies and player
-const allEnemies = [
+let allEnemies = [
   new Enemy(this.x, this.y),
   new Enemy(this.x, this.y),
   new Enemy(this.x, this.y),
@@ -152,4 +153,4 @@ const allEnemies = [
   new Enemy(this.x, this.y)
 ];
 
-const player = new Player();
+let player = new Player();
