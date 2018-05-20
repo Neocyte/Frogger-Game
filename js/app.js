@@ -1,5 +1,22 @@
 // ---------------------------GLOBAL VARIABLES----------------------------------
 
+// Player lives
+let hearts = 3;
+
+// Removes heart
+let loseHeart = function() {
+  if (hearts === 3) {
+    document.querySelector('.heart3').classList.add('.lose');
+    hearts = 2;
+  } else if (hearts === 2) {
+    document.querySelector('.heart2').classList.add('.lose');
+    hearts = 1;
+  } else if (hearts === 1) {
+    document.querySelector('.heart1').classList.add('.lose');
+    hearts = 0;
+  }
+};
+
 // Beginning score is 0
 let score = 0;
 
@@ -47,6 +64,7 @@ class Enemy {
     // Enemy and player collision
     if (this.x < player.x + 20 && this.x + 50 > player.x && this.y < player.y + 50 && this.y + 30 > player.y) { // Source: http://blog.sklambert.com/html5-canvas-game-2d-collision-detection/
       player.reset();
+      loseHeart();
     }
   }
 
