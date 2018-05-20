@@ -42,6 +42,10 @@ body {
     width: 50%;
 }
 
+.lose {
+    display: none;
+}
+
 .score-text {
   width: 100px;
   padding-left: 75px;
