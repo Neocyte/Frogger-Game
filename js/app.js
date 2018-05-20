@@ -6,13 +6,13 @@ let hearts = 3;
 // Removes heart
 let loseHeart = function() {
   if (hearts === 3) {
-    document.querySelector('.heart3').classList.add('.lose');
+    document.querySelector('.heart3').classList.add('lose');
     hearts = 2;
   } else if (hearts === 2) {
-    document.querySelector('.heart2').classList.add('.lose');
+    document.querySelector('.heart2').classList.add('lose');
     hearts = 1;
   } else if (hearts === 1) {
-    document.querySelector('.heart1').classList.add('.lose');
+    document.querySelector('.heart1').classList.add('lose');
     hearts = 0;
   }
 };
