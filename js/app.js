@@ -42,7 +42,8 @@ let keyListener = (function() {
 })();
 
 let gameOver = function() {
-  allEnemies = [];
+  allEnemies = []; // Deletes enemies
+  player.handleInput = undefined; // Disables keyboard
 
   document.querySelector('.gameover-popup').style.display = 'flex';
   document.querySelector('.gameover-background').style.display = 'flex';
