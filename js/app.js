@@ -142,6 +142,25 @@ class Player {
   }
 }
 
+class Bluegem {
+  constructor() {
+    this.sprite = 'images/Gem Blue.png'; // Player image
+    this.x = Math.random() * 450;
+    this.y = Math.random() * 350;
+  }
+
+  update() {
+    // Bluegem and player collision
+    if (this.x < player.x + 20 && this.x + 50 > player.x && this.y < player.y + 50 && this.y + 30 > player.y) {
+      score += 2;
+    }
+  }
+
+  render() {
+    ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+  }
+}
+
 // ---------------------------INSTANCIATION-------------------------------------
 
 // Instantiated enemies and player
@@ -155,3 +174,5 @@ let allEnemies = [
 ];
 
 let player = new Player();
+
+let blueGem = new Bluegem();
