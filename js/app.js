@@ -21,9 +21,9 @@ let loseHeart = function() {
 let score = 0;
 
 // Updates score by 1
-let updateScore = function() {
+let updateScore = function(num) {
   document.querySelector('.score-number').innerHTML = score;
-  score += 1;
+  score += num;
 };
 
 /* This listens for key presses and sends the keys to the
@@ -118,7 +118,7 @@ class Player {
     if (player.y < 20) {
       player.reset();
       increaseEnemySpeed();
-      updateScore();
+      updateScore(1);
       document.querySelector('.score-number').innerHTML = score;
     }
   }
@@ -170,7 +170,7 @@ class Bluegem {
 
     // Bluegem and player collision
     if (this.x < player.x + 20 && this.x + 50 > player.x && this.y < player.y + 50 && this.y + 30 > player.y) {
-      allEnemies = [];
+      updateScore(1);
     }
   }
 
@@ -205,7 +205,7 @@ class Greengem {
 
     // Bluegem and player collision
     if (this.x < player.x + 20 && this.x + 50 > player.x && this.y < player.y + 50 && this.y + 30 > player.y) {
-      allEnemies = [];
+      updateScore(2);
     }
   }
 
@@ -240,7 +240,7 @@ class Orangegem {
 
     // Bluegem and player collision
     if (this.x < player.x + 20 && this.x + 50 > player.x && this.y < player.y + 50 && this.y + 30 > player.y) {
-      allEnemies = [];
+      updateScore(3);
     }
   }
 
