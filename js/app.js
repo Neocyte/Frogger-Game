@@ -52,6 +52,14 @@ let gameOver = function() {
   });
 };
 
+let increaseEnemySpeed = function(dt) {
+  allEnemies.forEach(function(enemy) {
+    if (this.x < 500) {
+      this.x += (50 * dt);
+    }
+  });
+}
+
 // -----------------------------CLASSES-----------------------------------------
 
 // Enemies our player must avoid
@@ -109,6 +117,7 @@ class Player {
   update(dt) {
     if (player.y < 20) {
       player.reset();
+      increaseEnemySpeed();
       updateScore();
       document.querySelector('.score-number').innerHTML = score;
     }
@@ -266,3 +275,31 @@ let blueGem = new Bluegem();
 let greenGem = new Greengem();
 
 let orangeGem = new Orangegem();
+
+/*let gems = [
+  new Bluegem();
+  new Greengem();
+  new Orangegem();
+];
+
+// Shuffle function from http://stackoverflow.com/a/2450976
+function shuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+
+    while (currentIndex !== 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+    }
+
+    return array;
+}
+
+// Creates the cards
+function randomGem() {
+  let shuffGems = shuffle(gems);
+
+  shuffGems[1]
+}*/
