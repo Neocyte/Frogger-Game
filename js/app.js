@@ -146,16 +146,32 @@ class Bluegem {
   constructor() {
     this.sprite = 'images/Gem Blue.png'; // Player image
     this.x = Math.random() * 450;
-    this.y = Math.random() * 350;
+    this.y = Math.random() * 305;
   }
 
-  update() {
+  /* Update the enemy's position,
+     Parameter: dt = a time delta between ticks */
+  update(dt) {
+    if (this.x < 500) {
+      this.x += (75 * dt);
+    }
+    else if (this.x > 500) {
+      this.reset();
+    }
+
     // Bluegem and player collision
     if (this.x < player.x + 20 && this.x + 50 > player.x && this.y < player.y + 50 && this.y + 30 > player.y) {
-      score += 2;
+      allEnemies = [];
     }
   }
 
+  // Resets blue gem to the left with a random y-value
+  reset() {
+    this.x = 0;
+    this.y = Math.random() * 305;
+  }
+
+  // Draws the blue gem on the screen
   render() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
   }
