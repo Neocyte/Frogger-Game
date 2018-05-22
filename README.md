@@ -1,6 +1,25 @@
-frontend-nanodegree-arcade-game
-===============================
+# Frogger Game Project
 
-Students should use this [rubric](https://review.udacity.com/#!/projects/2696458597/rubric) for self-checking their submission. Make sure the functions you write are **object-oriented** - either class functions (like Player and Enemy) or class prototype functions such as Enemy.prototype.checkCollisions, and that the keyword 'this' is used appropriately within your class and class prototype functions to refer to the object the function is called upon. Also be sure that the **readme.md** file is updated with your instructions on both how to 1. Run and 2. Play your arcade game.
+## Table of Contents
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+* [Background](#background)
+* [Instructions](#instructions)
+* [Contributing](#contributing)
+
+## Background
+
+This project tested my skills in object-oriented JavaScript. I was given some starter code which included a set of images as well as the game loop engine which created the game's canvas out of those images. From thereon, I worked on building various classes within the `app.js` file and creating custom elements using HTML and CSS.
+
+## Instructions
+
+To play, click [here](https://neocyte.github.io/frontend-nanodegree-arcade-game/).
+
+The goal of the game is for your player to reach the water and score as many points as possible. Beware of the bugs!
+
+Use the arrows keys to move up, down, left, and right.
+
+## Contributing
+
+This repository is based off of the starter code provided to _all_ Udacity students. Therefore, I most likely will not accept pull requests.
+
+For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
