@@ -212,6 +212,41 @@ class Greengem {
   }
 }
 
+class Orangegem {
+  constructor() {
+    this.sprite = 'images/Gem Orange.png'; // Player image
+    this.x = Math.random() * 450;
+    this.y = Math.random() * 305;
+  }
+
+  /* Update the enemy's position,
+     Parameter: dt = a time delta between ticks */
+  update(dt) {
+    if (this.x < 500) {
+      this.x += (75 * dt);
+    }
+    else if (this.x > 500) {
+      this.reset();
+    }
+
+    // Bluegem and player collision
+    if (this.x < player.x + 20 && this.x + 50 > player.x && this.y < player.y + 50 && this.y + 30 > player.y) {
+      allEnemies = [];
+    }
+  }
+
+  // Resets blue gem to the left with a random y-value
+  reset() {
+    this.x = 0;
+    this.y = Math.random() * 305;
+  }
+
+  // Draws the blue gem on the screen
+  render() {
+    ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+  }
+}
+
 // ---------------------------INSTANCIATION-------------------------------------
 
 // Instantiated enemies and player
@@ -229,3 +264,5 @@ let player = new Player();
 let blueGem = new Bluegem();
 
 let greenGem = new Greengem();
+
+let orangeGem = new Orangegem();
