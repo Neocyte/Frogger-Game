@@ -117,7 +117,7 @@ class Player {
   // Resets player to original position if water is reached or if hit by enemy
   reset() {
     this.x = 200;
-    this.y = 420;
+    this.y = 400;
   }
 
   // Draws the enemy on the screen
