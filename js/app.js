@@ -20,13 +20,13 @@ function loseHeart() {
     document.querySelector('.heart1').classList.add('lose');
     hearts = 0;
   }
-};
+}
 
 // Updates score by 1
 function updateScore(num) {
   document.querySelector('.score-number').innerHTML = score;
   score += num;
-};
+}
 
 /* This listens for key presses and sends the keys to the
    Player.handleInput() method. Immediately invoked. */
@@ -52,7 +52,7 @@ function gameOver() {
   document.querySelector('.gameover-button').addEventListener('click', function() {
     location.reload();
   });
-};
+}
 
 // -----------------------------CLASSES-----------------------------------------
 
