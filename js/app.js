@@ -157,9 +157,3 @@ let allEnemies = [
 ];
 
 let player = new Player();
-
-let blueGem = new Bluegem();
-
-let greenGem = new Greengem();
-
-let orangeGem = new Orangegem();
