@@ -52,14 +52,6 @@ let gameOver = function() {
   });
 };
 
-let increaseEnemySpeed = function(dt) {
-  allEnemies.forEach(function(enemy) {
-    if (this.x < 500) {
-      this.x += (50 * dt);
-    }
-  });
-}
-
 // -----------------------------CLASSES-----------------------------------------
 
 // Enemies our player must avoid
@@ -117,7 +109,6 @@ class Player {
   update(dt) {
     if (player.y < 20) {
       player.reset();
-      increaseEnemySpeed();
       updateScore(1);
       document.querySelector('.score-number').innerHTML = score;
     }
