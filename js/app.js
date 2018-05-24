@@ -3,8 +3,13 @@
 // Player lives
 let hearts = 3;
 
+// Beginning score is 0
+let score = 0;
+
+// ---------------------------GLOBAL FUNCTIONS----------------------------------
+
 // Removes heart
-let loseHeart = function() {
+function loseHeart() {
   if (hearts === 3) {
     document.querySelector('.heart3').classList.add('lose');
     hearts = 2;
@@ -17,18 +22,15 @@ let loseHeart = function() {
   }
 };
 
-// Beginning score is 0
-let score = 0;
-
 // Updates score by 1
-let updateScore = function(num) {
+function updateScore(num) {
   document.querySelector('.score-number').innerHTML = score;
   score += num;
 };
 
 /* This listens for key presses and sends the keys to the
    Player.handleInput() method. Immediately invoked. */
-let keyListener = (function() {
+(function keyListener() {
   document.addEventListener('keyup', function(e) {
     const allowedKeys = {
         37: 'left',
@@ -41,7 +43,7 @@ let keyListener = (function() {
   });
 })();
 
-let gameOver = function() {
+function gameOver() {
   allEnemies = []; // Deletes enemies
   player.handleInput = undefined; // Disables keyboard
 
