@@ -57,7 +57,7 @@ body {
 }
 
 .lose {
-  display: none;
+    display: none;
 }
 
 .score-text {
@@ -67,31 +67,6 @@ body {
 
 @keyframes beat { /* Source: https://codepen.io/fivera/pen/rzepn */
 	to { transform: scale(1.4); }
-}
-
-/* --------------------------------GUIDE------------------------------------- */
-
-.guide {
-  position: absolute;
-  top: 76.5%;
-  left: 27.2%;
-}
-
-.guide-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background-color: #fff;
-  color: #000;
-  box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
-  margin-left: 36.75%;
-  margin-right: 36.75%;
-  border-radius: 5px;
-  font-size: 13px;
-  width: 505px;
-  height: 100px;
 }
 
 /* --------------------------------POPUP------------------------------------- */
