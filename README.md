@@ -12,7 +12,7 @@ This project tested my skills in object-oriented JavaScript. I was given some st
 
 ## Instructions
 
-To play, click [here](https://neocyte.github.io/frontend-nanodegree-arcade-game/).
+To play, click [here](https://neocyte.github.io/Frogger-Game/).
 
 The goal of the game is for your player to reach the water and score as many points as possible. Beware of the bugs!
 
