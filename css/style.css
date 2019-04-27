@@ -112,3 +112,115 @@ body {
   color: #fff;
   background-color: #ff0000;
 }
+
+/* -----------------------------MEDIA QUERIES-------------------------------- */
+
+/*SMALL DEVICES*/
+@media screen and (max-width: 600px) {
+  body {
+    background-size: 100vh 100vh;
+  }
+
+  .score-container {
+    margin: 2.5% 36.75% -2.5% 10%;
+    height: 10vh;
+    width: 80%;
+  }
+
+  .heart1,
+  .heart2,
+  .heart3 {
+    width: 60px;
+    height: 100px;
+    padding: 20px
+  }
+
+  .score-text {
+    width: 100%;
+    padding-left: 10%;
+    font-size: 70px;
+  }
+
+  .score-number {
+    width: 100%;
+    padding-right: 20%;
+    font-size: 70px;
+  }
+
+  .canvas {
+    width: 99vw;
+  }
+}
+
+/*MEDIUM DEVICES*/
+@media screen and (min-width: 601px) and (max-width: 1050px) {
+  body {
+    background-size: 100vh 100vh;
+  }
+
+  .score-container {
+    margin: 2.5% 36.75% -2.5% 10%;
+    height: 10vh;
+    width: 80%;
+  }
+
+  .heart1,
+  .heart2,
+  .heart3 {
+    width: 60px;
+    height: 100px;
+    padding: 20px
+  }
+
+  .score-text {
+    width: 100%;
+    padding-left: 10%;
+    font-size: 70px;
+  }
+
+  .score-number {
+    width: 100%;
+    padding-right: 20%;
+    font-size: 70px;
+  }
+
+  .canvas {
+    width: 99vw;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 800px) {
+  body {
+    background-size: 100vh 100vh;
+  }
+
+  .score-container {
+    margin: 2.5% 36.75% -2.5% 10%;
+    height: 10vh;
+    width: 80%;
+  }
+
+  .heart1,
+  .heart2,
+  .heart3 {
+    width: 60px;
+    height: 100px;
+    padding: 20px
+  }
+
+  .score-text {
+    width: 100%;
+    padding-left: 10%;
+    font-size: 70px;
+  }
+
+  .score-number {
+    width: 100%;
+    padding-right: 20%;
+    font-size: 70px;
+  }
+
+  .canvas {
+    width: 99vw;
+  }
+}
