@@ -61,7 +61,7 @@ body {
 }
 
 .lose {
-    display: none;
+    visibility: hidden;
 }
 
 .score-text {
