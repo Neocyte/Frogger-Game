@@ -156,7 +156,7 @@ class Player {
   }
 }
 
-// ---------------------------INSTANCIATION-------------------------------------
+// ---------------------------INSTANTIATION-------------------------------------
 
 // Instantiated enemies and player
 let allEnemies = [
