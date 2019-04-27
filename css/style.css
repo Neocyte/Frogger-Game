@@ -127,6 +127,10 @@ body {
     width: 80%;
   }
 
+  .hearts {
+    width: 100%;
+  }
+
   .heart1,
   .heart2,
   .heart3 {
@@ -164,6 +168,10 @@ body {
     width: 80%;
   }
 
+  .hearts {
+    width: 100%;
+  }
+
   .heart1,
   .heart2,
   .heart3 {
@@ -198,6 +206,10 @@ body {
     margin: 2.5% 36.75% -2.5% 10%;
     height: 10vh;
     width: 80%;
+  }
+
+  .hearts {
+    width: 100%;
   }
 
   .heart1,
