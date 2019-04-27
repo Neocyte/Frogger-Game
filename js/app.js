@@ -45,6 +45,16 @@ function updateScore(num) {
   });
 })();
 
+/* Resets each enemy with random x and y values when
+  returning focus to the tab */
+window.onfocus = function() {
+  for (let i = 0; i < allEnemies.length; i++) {
+    allEnemies[i].x = Math.random() * 450;
+    allEnemies[i].y = Math.random() * 350;
+  }
+}
+
+/* Prepares the game over state */
 function gameOver() {
   allEnemies = []; // Deletes enemies
   player.handleInput = undefined; // Disables keyboard
