@@ -151,7 +151,7 @@ body {
     font-size: 70px;
   }
 
-  .canvas {
+  canvas {
     width: 99vw;
   }
 }
@@ -192,7 +192,7 @@ body {
     font-size: 70px;
   }
 
-  .canvas {
+  canvas {
     width: 99vw;
   }
 }
@@ -232,7 +232,7 @@ body {
     font-size: 70px;
   }
 
-  .canvas {
+  canvas {
     width: 99vw;
   }
 }
