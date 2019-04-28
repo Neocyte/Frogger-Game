@@ -30,8 +30,8 @@ function updateScore(num) {
   score += num;
 }
 
-/* This listens for key presses and sends the keys to the
-   Player.handleInput() method. Immediately invoked. */
+/* Listens for key presses and passes the keys to the
+   Player.handleMouseInput() method. Immediately invoked. */
 (function keyListener() {
   document.addEventListener('keyup', function(e) {
     const allowedKeys = {
@@ -41,8 +41,33 @@ function updateScore(num) {
         40: 'down'
     };
 
-    player.handleInput(allowedKeys[e.keyCode]);
+    player.handleMouseInput(allowedKeys[e.keyCode]);
   });
+})();
+
+/* Listens for touches on the canvas and passes the X and Y coordianates
+   to the Player.handleTouchInput() method. Immediately invoked. */
+(function touchListener() {
+  let clientX, clientY;
+
+  document.querySelector('canvas').addEventListener('touchstart', function(e) {
+    // Save the first touch coordinates
+    clientX = e.touches[0].clientX;
+    clientY = e.touches[0].clientY;
+    e.preventDefault();
+  }, false);
+
+  document.querySelector('canvas').addEventListener('touchend', function(e) {
+    let deltaX, deltaY;
+
+    // compute the change in X and Y coordinates
+    // between the ending touch and the first touch
+    deltaX = e.changedTouches[0].clientX - clientX;
+    deltaY = e.changedTouches[0].clientY - clientY;
+
+    // process the data ...
+    player.handleTouchInput(deltaX, deltaY);
+  }, false);
 })();
 
 /* Resets each enemy with random x and y values when
@@ -57,7 +82,7 @@ window.onfocus = function() {
 /* Prepares the game over state */
 function gameOver() {
   allEnemies = []; // Deletes enemies
-  player.handleInput = undefined; // Disables keyboard
+  player.handleMouseInput = undefined; // Disables keyboard
 
   document.querySelector('.gameover-popup').style.display = 'flex';
   document.querySelector('.gameover-background').style.display = 'flex';
@@ -134,13 +159,13 @@ class Player {
     this.y = 400;
   }
 
-  // Draws the enemy on the screen
+  // Draws the player on the screen
   render() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
   }
 
   // Moves player based on key press
-  handleInput(arrow) {
+  handleMouseInput(arrow) {
     if (arrow == 'left' && this.x > 0) {
         this.x -= 100;
     }
@@ -151,6 +176,22 @@ class Player {
         this.y -= 95;
     }
     if(arrow == 'down' && this.y < 400) {
+        this.y += 95;
+    }
+  }
+
+  // Moves player based on touches
+  handleTouchInput(deltaX, deltaY) {
+    if (deltaX < 0 && this.x > 0 && deltaY > 0 && deltaY < 200) { // left
+        this.x -= 100;
+    } else if (deltaX > 0  && this.x < 400 && deltaY > 0 && deltaY < 200) { // right
+        this.x += 100;
+    }
+
+    if (deltaY < 0 && this.y > 5 && deltaX > 0 && deltaX < 200) { // up
+        this.y -= 95;
+
+    } else if (deltaY > 0 && this.y < 400 && deltaX > 0 && deltaX < 200) { // down
         this.y += 95;
     }
   }
