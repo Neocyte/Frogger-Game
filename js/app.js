@@ -181,15 +181,15 @@ class Player {
 
   // Moves player based on touches
   handleTouchInput(deltaX, deltaY) {
-    if (deltaX < 0 && this.x > 0 && deltaY > -100 && deltaY < 100) { // left
+    if (deltaX < 0 && this.x > 0 && deltaY > 0 && deltaY < 200) { // left
         this.x -= 100;
-    } else if (deltaX > 0  && this.x < 400 && deltaY > -100 && deltaY < 100) { // right
+    } else if (deltaX > 0  && this.x < 400 && deltaY > 0 && deltaY < 200) { // right
         this.x += 100;
     }
 
-    if (deltaY < 0 && this.y > 5 && deltaX > -100 && deltaX < 100) { // up
+    if (deltaY < 0 && this.y > 5 && deltaX > 0 && deltaX < 200) { // up
         this.y -= 95;
-    } else if (deltaY > 0 && this.y < 400 && deltaX > -100 && deltaX < 100) { // down
+    } else if (deltaY > 0 && this.y < 400 && deltaX > 0 && deltaX < 200) { // down
         this.y += 95;
     }
   }
