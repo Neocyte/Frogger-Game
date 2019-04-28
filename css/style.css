@@ -8,7 +8,7 @@
 body {
   font-family: arcadeFont, "Comic Sans MS", cursive, sans-serif, Georgia, serif;
   text-align: center;
-  background-image: url('http://hddesktopwallpapers.in/wp-content/uploads/2015/09/grass-wallpaper-full-hd.jpg'); /* Source: http://hddesktopwallpapers.in/grass-wallpaper-full-hd/ */
+  background-image: url('../images/grass-background.jpg'); /* Source: http://hddesktopwallpapers.in/grass-wallpaper-full-hd/ */
 }
 
 /* ----------------------------------SCORE----------------------------------- */
