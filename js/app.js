@@ -54,7 +54,6 @@ function updateScore(num) {
   document.addEventListener('touchstart', function(e) {
     clientX = e.touches[0].clientX;
     clientY = e.touches[0].clientY;
-    e.preventDefault();
   }, false);
 
   // compute the change in X and Y coordinates
