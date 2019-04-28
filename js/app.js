@@ -82,6 +82,7 @@ window.onfocus = function() {
 function gameOver() {
   allEnemies = []; // Deletes enemies
   player.handleMouseInput = undefined; // Disables keyboard
+  player.handleTouchInput = undefined; // Disables touch
 
   document.querySelector('.gameover-popup').style.display = 'flex';
   document.querySelector('.gameover-background').style.display = 'flex';
