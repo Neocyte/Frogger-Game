@@ -45,33 +45,32 @@ function updateScore(num) {
   });
 })();
 
-/* Listens for touches on the canvas and passes the X and Y coordianates
-   to the Player.handleTouchInput() method. Immediately invoked. */
+/* Listens for touches (swipes) on the screen and passes changes in the X and Y
+   coordianates to the Player.handleTouchInput() method. Immediately invoked. */
 (function touchListener() {
   let clientX, clientY;
 
+  // Save the first touch coordinates
   document.addEventListener('touchstart', function(e) {
-    // Save the first touch coordinates
     clientX = e.touches[0].clientX;
     clientY = e.touches[0].clientY;
     e.preventDefault();
   }, false);
 
+  // compute the change in X and Y coordinates
+  // between the ending touch and the first touch
   document.addEventListener('touchend', function(e) {
     let deltaX, deltaY;
-
-    // compute the change in X and Y coordinates
-    // between the ending touch and the first touch
     deltaX = e.changedTouches[0].clientX - clientX;
     deltaY = e.changedTouches[0].clientY - clientY;
 
-    // process the data ...
+    // pass the data ...
     player.handleTouchInput(deltaX, deltaY);
   }, false);
 })();
 
 /* Resets each enemy with random x and y values when
-  returning focus to the tab */
+  returning focus to the window */
 window.onfocus = function() {
   for (let i = 0; i < allEnemies.length; i++) {
     allEnemies[i].x = Math.random() * 450;
@@ -79,7 +78,7 @@ window.onfocus = function() {
   }
 }
 
-/* Prepares the game over state */
+/* Prepares the game-over state */
 function gameOver() {
   allEnemies = []; // Deletes enemies
   player.handleMouseInput = undefined; // Disables keyboard
@@ -190,7 +189,6 @@ class Player {
 
     if (deltaY < 0 && this.y > 5 && deltaX > 0 && deltaX < 200) { // up
         this.y -= 95;
-
     } else if (deltaY > 0 && this.y < 400 && deltaX > 0 && deltaX < 200) { // down
         this.y += 95;
     }
