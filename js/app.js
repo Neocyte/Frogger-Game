@@ -50,14 +50,14 @@ function updateScore(num) {
 (function touchListener() {
   let clientX, clientY;
 
-  document.querySelector('canvas').addEventListener('touchstart', function(e) {
+  document.addEventListener('touchstart', function(e) {
     // Save the first touch coordinates
     clientX = e.touches[0].clientX;
     clientY = e.touches[0].clientY;
     e.preventDefault();
   }, false);
 
-  document.querySelector('canvas').addEventListener('touchend', function(e) {
+  document.addEventListener('touchend', function(e) {
     let deltaX, deltaY;
 
     // compute the change in X and Y coordinates
